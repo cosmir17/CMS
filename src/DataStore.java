@@ -21,9 +21,9 @@ public class DataStore {
         this.out = out;
     }
 
-    public void postNewOrder(Order order) {
+    public void postOrder(Order order) {
 
-        idToOrder.put(id++, order);
+        idToOrder.put(id, order);
 
         out.println(id + " " +
                 order.getDealer() + " " +
@@ -33,7 +33,21 @@ public class DataStore {
                 order.getPrice() + " " +
                 "HAS BEEN POSTED");
 
+        id++;
     }
 
+    public void revokeOrder(DealerID dealer, int id) {
+        if (!idToOrder.containsKey(id)) {
+            out.println("UNKNOWN ORDER");
+            return;
+        }
 
+        if(!idToOrder.get(id).getDealer().equals(dealer)) {
+            out.println("UNAUTHORIZED");
+            return;
+        }
+
+        idToOrder.remove(id);
+        out.println(id + " HAS BEEN REVOKED");
+    }
 }

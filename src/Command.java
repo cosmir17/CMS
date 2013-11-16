@@ -6,6 +6,12 @@
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Command {
+    DealerID getDealer() {
+        return dealer;
+    }
+
+    private DealerID dealer;
+
     //it does execution
                            //every command has a dealer ID so let's put it here
     //could be string , enum
@@ -16,6 +22,6 @@ public abstract class Command {
 
     }
 
-    private DealerID dealer;
+
     abstract void execute(DataStore dataStore);
 }

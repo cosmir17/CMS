@@ -23,7 +23,7 @@ public class PostCommand extends Command {
     void execute(DataStore dataStore) {
         //To change body of implemented methods use File | Settings | File Templates.
         System.out.println("valid post command");
-        dataStore.postNewOrder(order);
+        dataStore.postOrder(order);
 
     }
 
