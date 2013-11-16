@@ -18,7 +18,7 @@ public class AggressCommand extends Command {
     }
 
     @Override
-    void execute() {
+    void execute(DataStore dataStore) {
         System.out.println("valid aggress cmd");
     }
 }

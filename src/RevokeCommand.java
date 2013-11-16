@@ -18,7 +18,7 @@ public class RevokeCommand extends Command {
 
 
     @Override
-    void execute() {
+    void execute(DataStore dataStore) {
         //To change body of implemented methods use File | Settings | File Templates.
         System.out.println("valid revoke command");
     }

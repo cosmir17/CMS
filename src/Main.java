@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
@@ -9,10 +12,14 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
+        //any PrintStream can be imported
+        DataStore dataStore = new DataStore(System.out);
         Scanner scan = new Scanner(System.in);
-        while(scan.hasNextLine()) {
+
+        while (scan.hasNextLine()) {
             Command cmd = Parser.parseCommand(scan.nextLine());
-            cmd.execute();
+            cmd.execute(dataStore);
+
         }
     }
 

@@ -17,5 +17,5 @@ public abstract class Command {
     }
 
     private DealerID dealer;
-    abstract void execute();
+    abstract void execute(DataStore dataStore);
 }
