@@ -23,6 +23,7 @@ public class CheckCommand extends Command {
     void execute(DataStore dataStore) {
         System.out.println("valid check command");
         //To change body of implemented methods use File | Settings | File Templates.
+        dataStore.checkOrder(getDealer(), orderID);
 
     }
 

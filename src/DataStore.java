@@ -42,12 +42,42 @@ public class DataStore {
             return;
         }
 
-        if(!idToOrder.get(id).getDealer().equals(dealer)) {
+        if (!idToOrder.get(id).getDealer().equals(dealer)) {
             out.println("UNAUTHORIZED");
             return;
         }
 
         idToOrder.remove(id);
         out.println(id + " HAS BEEN REVOKED");
+    }
+
+    public void checkOrder(DealerID dealer, int id) {
+
+        if (!idToOrder.containsKey(id)) {
+            out.println("UNKNOWN ORDER");
+            return;
+        }
+
+        Order order = idToOrder.get(id);
+
+        if (!order.getDealer().equals(dealer)) {
+            out.println("UNAUTHORISED");
+
+        } else if (idToOrder.get(id).getAmount() > 0) {
+
+            out.println(id + " " +
+                    order.getDealer() + " " +
+                    order.getSide() + " " + " " +
+                    order.getCommodity() + " " +
+                    order.getAmount() + " " +
+                    order.getPrice() + " "
+            );
+
+        } else if (idToOrder.get(id).getAmount() <= 0) {
+            out.println(id + " HAS BEEN FILLED");
+        }
+
+
+
     }
 }
