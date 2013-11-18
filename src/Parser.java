@@ -15,6 +15,7 @@ public class Parser {
     //polymorphism, whatever comes in
 
     private Parser() {
+        //this 'private' prevents a user from initiating an instance of this class.
     }
 
     enum OrderType {

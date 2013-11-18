@@ -20,6 +20,13 @@ public class Main {
             Command cmd = Parser.parseCommand(scan.nextLine());
             cmd.execute(dataStore);
 
+            //commands and main classes built first
+            //command is an abstract class
+            //other command classes inherits 'command class'
+            //Commodity, DealerID and Side classes are enums
+            //
+
+
         }
     }
 

@@ -43,6 +43,8 @@ public class Order {
         this.amount = amount;
         this.price = price;
 
+        //This is for making an order object, so that it doesn't use
+
     }
 }
 
