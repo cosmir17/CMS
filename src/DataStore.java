@@ -77,7 +77,6 @@ public class DataStore {
             out.println(id + " HAS BEEN FILLED");
         }
 
-        System.out.println("is it GIT working?");
 
     }
 }
