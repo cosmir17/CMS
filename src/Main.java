@@ -19,10 +19,10 @@ public class Main {
         while (scan.hasNextLine()) {
             Command cmd = Parser.parseCommand(scan.nextLine());
             /*
-            Parser -> parseCommand -> switch -> static AggressCommand
-            -> return new ListCommand(?,?) -> it's an object of ListCommand ->
-            -> cmd.execute(dataStore) == ListCommand.execute(dataStore)
-            -> dataStore.ListOrder(getDealer(), orderID); -> program runs with the data structure
+            Parser -> parseCommand -> switch -> static CheckCommand
+            -> return new CheckCommand(?,?) -> it's an object of CheckCommand ->
+            -> cmd.execute(dataStore) == CheckCommand.execute(dataStore)
+            -> dataStore.CheckOrder(getDealer(), orderID); -> program runs with the data structure
             -> it passes messages to printOut object which is Out -> it goes to System.out
             */
             cmd.execute(dataStore);
