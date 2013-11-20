@@ -12,11 +12,12 @@ public abstract class Command {
 
     private DealerID dealer;
 
-    //it does execution
-    //every command has a dealer ID so let's put it here
-    //could be string , enum
-
-    Command() {}
+    /*It does execution
+    every command has a dealer ID so let's put it here
+    could be string , enum
+      */
+    Command() {
+    }
 
     Command(DealerID dealer) {
         this.dealer = dealer;

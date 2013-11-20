@@ -8,12 +8,13 @@ import java.util.HashMap;
  * To change this template use File | Settings | File Templates.
  */
 public class Parser {
-    //noun parser
-    //interface is adjective, e.g. serializable
-    // inheritance (abstract class): noun, can grab what it is
-    //interface : abjective, description
-    //polymorphism, whatever comes in
-
+    /*
+    noun parser
+    interface is adjective, e.g. serializable
+    inheritance (abstract class): noun, can grab what it is
+    interface : abjective, description
+    polymorphism, whatever comes in
+      */
     private Parser() {
         //this 'private' prevents a user from initiating an instance of this class.
     }
