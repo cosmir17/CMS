@@ -19,7 +19,12 @@ public class DataStore {
         idToOrder = new HashMap<Integer, Order>();
         id = INITIAL_ID;
         this.out = out;
+
+        //The reason it uses printstream is that this class can be re-used for sending streams to network or a file
+        //reusability issue.
     }
+    //This class defines a data structure and methods for its managements.
+    //
 
     public void postOrder(Order order) {
 

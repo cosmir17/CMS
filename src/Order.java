@@ -8,6 +8,7 @@
 public class Order {
     private DealerID dealer;
 
+    //defining methods for getting values from its instance
     public Side getSide() {
         return side;
     }
@@ -43,7 +44,7 @@ public class Order {
         this.amount = amount;
         this.price = price;
 
-        //This is for making an order object, so that it doesn't use
+        //This is for making an order object, so that it passes objects rather than integers or strings
 
     }
 }

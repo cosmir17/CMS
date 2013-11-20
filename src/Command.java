@@ -13,8 +13,9 @@ public abstract class Command {
     private DealerID dealer;
 
     //it does execution
-                           //every command has a dealer ID so let's put it here
+    //every command has a dealer ID so let's put it here
     //could be string , enum
+
     Command() {}
 
     Command(DealerID dealer) {
