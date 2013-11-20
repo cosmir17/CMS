@@ -18,7 +18,13 @@ public class Main {
 
         while (scan.hasNextLine()) {
             Command cmd = Parser.parseCommand(scan.nextLine());
-            //HOW DOES IT IDENTIFY WHICH COMMAND METHOD IT WILL USE?
+            /*
+            Parser -> parseCommand -> switch -> static AggressCommand
+            -> return new ListCommand(?,?) -> it's an object of ListCommand ->
+            -> cmd.execute(dataStore) == ListCommand.execute(dataStore)
+            -> dataStore.ListOrder(getDealer(), orderID); -> program runs with the data structure
+            -> it passes messages to printOut object which is Out -> it goes to System.out
+            */
             cmd.execute(dataStore);
 
             /*
@@ -32,7 +38,7 @@ public class Main {
             it uses a method in dataStore class in order to do something with the data structure(hashmap)
             data store methods also have messages to print out to the print stream.
             dataStore.checkOrder(getDealer(), orderID);
-              */
+            */
 
         }
     }
